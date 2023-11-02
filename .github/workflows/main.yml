@@ -39,8 +39,8 @@ jobs:
 
       - name: Archive and Compress Docker image
         run: |
-          tar -czvf nodeapp2.tar.gz 
-        working-directory: ./  # Archive all files in the current directory
+          tar --exclude='./.git*' -czvf nodeapp2.tar.gz .
+        working-directory: ./
 
       - name: Extract Docker image from archive
         run: |
