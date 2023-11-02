@@ -57,4 +57,4 @@ jobs:
           containerAppName: devapp3
           resourceGroup: ACRforNODEJSapp-RG
           imageToDeploy: acrfornode.azurecr.io/nodeapp2:latest
-          archivePath: extracted  # Specify the directory containing the extracted Docker image
+        
