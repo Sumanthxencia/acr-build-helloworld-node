@@ -29,7 +29,7 @@ jobs:
 
       - name: Build and tag Docker image
         run: |
-          docker build -t acrfornode.azurecr.io/nodeapp2:latest 
+          docker build -t acrfornode.azurecr.io/nodeapp2:latest .
         working-directory: ./
 
       - name: Push Docker image to Azure Container Registry
@@ -39,7 +39,7 @@ jobs:
 
       - name: Archive and Compress Docker image
         run: |
-          tar -czvf nodeapp2.tar.gz
+          tar -czvf nodeapp2.tar.gz 
         working-directory: ./  # Archive all files in the current directory
 
       - name: Extract Docker image from archive
