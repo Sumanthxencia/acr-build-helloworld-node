@@ -36,16 +36,6 @@ jobs:
         run: |
           docker push acrfornode.azurecr.io/nodeapp2:latest
         working-directory: ./
-      - name: Archive and Compress Docker image
-        run: |
-          tar --exclude='./.git*' -czvf nodeapp2.tar.gz .
-        working-directory: ./
-      - name: Create 'extracted' directory
-        run: mkdir -p extracted
-      - name: Extract Docker image from archive
-        run: |
-          tar -xzvf nodeapp2.tar.gz -C extracted
-        working-directory: ./
       - name: Log in to Azure
         uses: azure/login@v1
         with:
