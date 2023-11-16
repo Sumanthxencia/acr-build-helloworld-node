@@ -47,5 +47,5 @@ jobs:
           containerAppName: devapp3
           resourceGroup: ACRforNODEJSapp-RG
           imageToDeploy: acrfornode.azurecr.io/nodeapp2:latest
-          appsourcePath: extracted
+          
         
